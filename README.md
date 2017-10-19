@@ -4,11 +4,11 @@
     import psutil
 
     def printinfo():
-        threading.Timer(5.0,printitm).start() #to repeat for every 5 sec
+        threading.Timer(5.0,printinfo).start() #to repeat for every 5 sec
         
         print 'No of cpu cores are: ',psutil.cpu_count()
         print 'RAM usage:  ',psutil.virtual_memory()
-        print 'Disk Usage: ',psutil.disk_usage('C:\\')
+        print 'Disk Usage: ',psutil.disk_usage('C:\\') #usage of C drive
         print 'CPU Usage: ',psutil.cpu_percent(interval=None,percpu=True)
         
     printinfo()
